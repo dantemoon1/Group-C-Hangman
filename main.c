@@ -3,6 +3,8 @@
 
 
 const char* pickword(){
+	time_t t;
+	srand((unsigned) time(&t));
 	int r = rand() % 85; //get a random number between 0 and 84
 	r++;
 	FILE *f = fopen("words.txt","r"); //open the file
